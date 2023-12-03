@@ -40,16 +40,6 @@ const PeopleList = () => {
     setData(updatedData);
   };
 
-  const handleRowClick = (id) => {
-    setSelectedRows((prevSelectedRows) => {
-      if (prevSelectedRows.includes(id)) {
-        return prevSelectedRows.filter((rowId) => rowId !== id);
-      } else {
-        return [...prevSelectedRows, id];
-      }
-    });
-  };
-
   const handleDeleteSelected = () => {
     const updatedData = data.filter((person) => !selectedRows.includes(person.id));
     setData(updatedData);
